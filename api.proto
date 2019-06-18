@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 service NoteService {
-    rpc List (Empty) returns (NoteList) {}
+    rpc List (Empty) returns (NoteResponse) {}
     rpc Get (NoteRequestId) returns (Note) {}
     rpc Insert (Note) returns (Note) {}
     rpc Update (Note) returns (Note) {}
@@ -16,7 +16,7 @@ message Note {
     string content = 3;
 }
 
-message NoteList {
+message NoteResponse {
     repeated Note notes = 1;
 }
 
