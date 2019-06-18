@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+
+message Empty {}
+
+message HealthResponse {
+    bool isActive = 1;
+}
+
+service HealthService {
+    rpc IsActive (Empty) returns (HealthResponse) {}
+}
+

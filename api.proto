@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-service NoteService {
-    rpc List (Empty) returns (NoteResponse) {}
-    rpc Get (NoteRequestId) returns (Note) {}
-    rpc Insert (Note) returns (Note) {}
-    rpc Update (Note) returns (Note) {}
-    rpc Delete (NoteRequestId) returns (Empty) {}
+service APIService {
+    rpc ListNotes (Empty) returns (NoteResponse) {}
+    rpc GetNoteById (NoteRequestId) returns (Note) {}
+    rpc CreateNote (Note) returns (Note) {}
+    rpc UpdateNote (Note) returns (Note) {}
+    rpc DeleteNoteById (NoteRequestId) returns (Empty) {}
 }
 
 message Empty {}
